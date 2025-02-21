@@ -2,14 +2,6 @@
 
 A Python calculator application demonstrating object-oriented programming principles, unit testing, and design patterns.
 
-## Features
-
-- Basic arithmetic operations (add, subtract, multiply, divide)
-- Calculation history management
-- Exception handling for division by zero
-- Type hints for better code documentation
-- Comprehensive unit tests with pytest
-- Follows SOLID principles and design patterns
 ## Project Structure
 
 - `calculator/`: Main package directory
@@ -25,6 +17,24 @@ A Python calculator application demonstrating object-oriented programming princi
   - `test_calculation.py`: Tests for Calculation class
    - `test_calculator.py`: Tests for Calculator class operations
   - `test_operations.py`: Tests for basic arithmetic operations
+
+## Branch Information
+
+1. main - Basic Calculator with functions
+2. part2 - Intermediate Calculator with static methods
+3. part3 - Advanced Calculator with comprehensive features
+# Calculator Project
+
+A Python calculator application demonstrating object-oriented programming principles, unit testing, and design patterns.
+
+## Features
+
+- Basic arithmetic operations (add, subtract, multiply, divide)
+- Calculation history management
+- Exception handling for division by zero
+- Type hints for better code documentation
+- Comprehensive unit tests with pytest
+- Follows SOLID principles and design patterns
 
 ## Branch Information
 
