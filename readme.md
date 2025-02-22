@@ -23,6 +23,8 @@ A Python calculator application demonstrating object-oriented programming princi
 1. main - Basic Calculator with functions
 2. part2 - Intermediate Calculator with static methods
 3. part3 - Advanced Calculator with comprehensive features
+4. command - includes Faker and test data
+
 # Calculator Project
 
 A Python calculator application demonstrating object-oriented programming principles, unit testing, and design patterns.
@@ -37,8 +39,3 @@ A Python calculator application demonstrating object-oriented programming princi
 - Follows SOLID principles and design patterns
 - Faker, Test Data Generator, and User Input Conditions
 
-## Branch Information
-
-1. main - Basic Calculator with functions
-2. part2 - Intermediate Calculator with static methods
-3. part3 - Advanced Calculator with comprehensive features
