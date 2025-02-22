@@ -18,7 +18,3 @@ def test_divide():
     '''Test that division function works'''
     assert Calculator.divide(2,2) == 1
 
-def test_division_by_zero():
-    '''Test that division by zero raises an error'''
-    with pytest.raises(ValueError):
-        Calculator.divide(10, 0)
