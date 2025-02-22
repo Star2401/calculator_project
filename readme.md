@@ -35,6 +35,7 @@ A Python calculator application demonstrating object-oriented programming princi
 - Type hints for better code documentation
 - Comprehensive unit tests with pytest
 - Follows SOLID principles and design patterns
+- Faker, Test Data Generator, and User Input Conditions
 
 ## Branch Information
 
