@@ -8,7 +8,11 @@ multiplication, and division.
 import sys
 from decimal import Decimal, InvalidOperation
 from calculator import Calculator
-from app import App
+from app.app import App
+
+def main():
+    # This function will start REPL
+    app = App().start()
 
 # You have to include this in your main.py because this forces the program to start when you run it from the command line.
 if __name__ == "__main__":

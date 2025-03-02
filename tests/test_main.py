@@ -1,5 +1,18 @@
 import pytest
+from main import main
 from main import calculate_and_print
+
+def test_main_exits(monkeypatch, capsys):
+    # Mock user input
+    monkeypatch.setattr('builtins.input', lambda prompt:"exit")
+
+    with pytest.raises(SystemExit) as excinfo:
+    # Run the main function
+        main()
+
+    # Optionally, check the exit status
+    assert excinfo.value.code == 1
+
 
 @pytest.mark.parametrize("a_string, b_string, operation_string, expected_string",[
     ("5", "3", 'add', "The result of 5 add 3 is equal to 8"),

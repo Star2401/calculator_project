@@ -1,6 +1,6 @@
 from app.command_handler import CommandHandler
 
-class REPL:
+class App:
     def __init__(self):
         self.handler = CommandHandler()
 
@@ -30,4 +30,5 @@ class REPL:
                 print("Error:", e)
 
 if __name__ == "__main__":
-    REPL().start()
+    App().start()
+

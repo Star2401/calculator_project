@@ -13,6 +13,9 @@ class CommandHandler:
             "divide": DivideCommand()
         }
 
+    def register_command(self, command_name: str, command_object):
+        self.commands[command_name.lower()] = command_object
+
     def execute(self, command_name: str, a: float, b: float):
         # Retrieve the command from the dictionary
         command = self.commands.get(command_name.lower())
