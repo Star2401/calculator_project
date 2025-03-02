@@ -6,6 +6,7 @@ class App:
 
     def start(self):
         print("Interactive Calculator")
+        print("Available commands:", ", ".join(self.handler.commands.keys()))
         print("Type a command (add, subtract, multiply, divide) followed by two numbers, or 'exit' to quit.")
 
 
@@ -13,6 +14,14 @@ class App:
             user_input = input("Enter command: ").strip().split()
             if not user_input:
                 continue
+
+            #Check if the user typed "menu"
+            if user_input[0].lower() == "menu":
+                print("Available commands:")
+                for command in self.handler.commands.keys():
+                    print(" -", command)
+                continue # Go back to the input prompt
+
             if user_input[0].lower() == "exit":
                 print("Exiting...")
                 break
