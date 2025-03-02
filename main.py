@@ -8,6 +8,11 @@ multiplication, and division.
 import sys
 from decimal import Decimal, InvalidOperation
 from calculator import Calculator
+from app import App
+
+# You have to include this in your main.py because this forces the program to start when you run it from the command line.
+if __name__ == "__main__":
+    app = App().start() # Instantiate an instance of App
 
 class OperationCommand:
     """Implements the Command pattern for calculator operations.
