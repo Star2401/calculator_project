@@ -10,14 +10,6 @@ from decimal import Decimal, InvalidOperation
 from calculator import Calculator
 from app.app import App
 
-def main():
-    # This function will start REPL
-    app = App().start()
-
-# You have to include this in your main.py because this forces the program to start when you run it from the command line.
-if __name__ == "__main__":
-    app = App().start() # Instantiate an instance of App
-
 class OperationCommand:
     """Implements the Command pattern for calculator operations.
     
@@ -69,12 +61,17 @@ def calculate_and_print(a, b, operation_name):
 
 def main():
     """Entry point for the calculator application."""
-    if len(sys.argv) != 4:
+    # If not additional command-line arguments are provided, start the interactive app
+    if len(sys.argv) == 1:
+        App().start()
+    # If exactly 3 arguments are provided (script name plus three arguments), run command-line mode.
+    elif len(sys.argv) == 4:
+        _, a, b, operation_name = sys.argv
+        calculate_and_print(a, b, operation_name)
+    # Otherwise, print usage information and exit
+    else:
         print("Usage: python calculator_main.py <number1> <number2> <operation>")
         sys.exit(1)
-
-    _, a, b, operation_name = sys.argv
-    calculate_and_print(a, b, operation_name)
 
 if __name__ == '__main__':
     main()

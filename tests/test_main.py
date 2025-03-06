@@ -28,3 +28,21 @@ def test_calculate_and_print(a_string, b_string, operation_string, expected_stri
     calculate_and_print(a_string, b_string, operation_string)
     captured = capsys.readouterr()
     assert captured.out.strip() == expected_string
+
+def test_menu_command(monkeypatch, capsys):
+    # Create an iterator for inputs: first "menu" then "exit"
+    inputs = iter(["menu", "exit"])
+    monkeypatch.setattr('builtins.input', lambda prompt: next(inputs))
+
+    # Run the main function (which should process "menu" and "exit")
+    try:
+        main()
+    except SystemExit:
+        # Catch SystemExit if main() exits the program after "exit"
+        pass
+
+    #Capture the output and verify that the menu is displayed
+    captured = capsys.readouterr().out
+    assert "Available commands:" in captured
+    # Optionally check that at least one known command is listed
+    assert "add" in captured

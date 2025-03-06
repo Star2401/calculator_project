@@ -1,3 +1,4 @@
+import sys
 from app.command_handler import CommandHandler
 
 class App:
@@ -7,7 +8,7 @@ class App:
     def start(self):
         print("Interactive Calculator")
         print("Available commands:", ", ".join(self.handler.commands.keys()))
-        print("Type a command (add, subtract, multiply, divide) followed by two numbers, or 'exit' to quit.")
+        print("Type a command (add, subtract, multiply, divide) followed by two numbers, 'menu' to see available commands, or 'exit' to quit.")
 
 
         while True:
@@ -15,16 +16,15 @@ class App:
             if not user_input:
                 continue
 
-            #Check if the user typed "menu"
-            if user_input[0].lower() == "menu":
-                print("Available commands:")
-                for command in self.handler.commands.keys():
-                    print(" -", command)
-                continue # Go back to the input prompt
-
-            if user_input[0].lower() == "exit":
+            command = user_input[0].lower()
+            if command == "exit":
                 print("Exiting...")
-                break
+                sys.exit(1)
+
+            elif command == "menu":
+                print("Available commands: " + ", ".join(self.handler.commands.keys()))
+                continue
+
             if len(user_input) != 3:
                 print("Invalid input. Please enter: command number1 number2")
                 continue
@@ -38,6 +38,4 @@ class App:
             except Exception as e:
                 print("Error:", e)
 
-if __name__ == "__main__":
-    App().start()
 
