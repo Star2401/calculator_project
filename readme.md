@@ -23,7 +23,9 @@ A Python calculator application demonstrating object-oriented programming princi
 1. main - Basic Calculator with functions
 2. part2 - Intermediate Calculator with static methods
 3. part3 - Advanced Calculator with comprehensive features
-4. command - includes Faker and test data
+4. command - Includes Faker and test data
+5. command-pattern - REPL and command patterns
+6. log_and_environment - GitHub actions
 
 # Calculator Project
 
