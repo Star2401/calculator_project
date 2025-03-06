@@ -38,4 +38,6 @@ A Python calculator application demonstrating object-oriented programming princi
 - Comprehensive unit tests with pytest
 - Follows SOLID principles and design patterns
 - Faker, Test Data Generator, and User Input Conditions
+- REPL and command pattern for the four basic commands: add, subtract, multiply, and divide to add interactivity.
+- Menu Command.
 
